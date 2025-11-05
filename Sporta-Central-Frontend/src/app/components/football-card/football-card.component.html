@@ -1,0 +1,27 @@
+<!-- {{match | json}} -->
+@if (football) {
+    <div class="hover:bg-blue-300 h-full hover:border-b-green-600 translate-all rounded-xl border-b-orange-500 border-b-8 card border p-4 bg-white shadow-lg mt-2">
+        <div class="header border-b-2 pb-3 border-b-gray-200">
+            <h1 class="font-bold">{{football.team1 }}</h1>
+            <p>{{football.matchvenu }}</p>
+        </div>
+        <div class="body mt-4">
+            <div class="flex justify-between px-2">
+                <p class="font-bold">{{football.team1}}</p>
+                
+                <p class="font-bold">{{football.score1}}</p>
+            </div>
+           
+            <div class="flex justify-between px-2">
+                <p class="font-bold">{{football.team2}}</p>
+                <br>
+                <p class="font-bold">{{football.score2}}</p>
+            </div>
+        </div>
+        <div class="footer">
+            <p class="text-red-700">{{football.liveText}}</p>
+            <p class="text-green-700-700">{{football.textComplete}}</p>
+        </div>
+    </div>
+    
+}

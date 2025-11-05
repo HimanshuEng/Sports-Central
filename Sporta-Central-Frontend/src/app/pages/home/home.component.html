@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sports Web App</title>
+  <script src="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.js"></script> <!-- Tailwind CDN -->
+  <style>
+    /* Hero Section Animation */
+    .hero {
+      background-image: url('https://i.pinimg.com/736x/04/82/6d/04826dce193bf7644357aed28652d7a3.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 80vh;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Scale Effect on Cards */
+    .hover-scale:hover {
+      transform: scale(1.1);
+      transition: transform 0.3s ease;
+    }
+
+    /* Button Ripple Effect */
+    .ripple {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ripple:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .ripple:active:after {
+      width: 200%;
+      height: 200%;
+      opacity: 1;
+      transition: width 0.5s, height 0.5s, opacity 0.5s;
+    }
+
+    /* Glow Effect for Headings */
+    .glow {
+      text-shadow: 0 0 10px rgba(0, 0, 255, 0.8), 0 0 20px rgba(0, 0, 255, 0.6),
+        0 0 30px rgba(0, 0, 255, 0.4);
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100 font-sans">
+
+ <!-- Hero Section -->
+ <section class="hero flex items-center justify-center text-center text-white bg-opacity-50">
+  <div class="bg-black bg-opacity-50 px-6 py-12 rounded-lg">
+    <h1 class="text-5xl font-extrabold mb-4 animate-pulse">Welcome to SportsApp</h1>
+    <p class="text-xl mb-6">Your one-stop destination for live scores, articles, sports news, and more!</p>
+    <a routerLink="'/Categories'" class="bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300 btn-glow">
+      Explore Sports
+    </a>
+  </div>
+</section>
+
+  <!-- Main Content Section -->
+  <main class="py-20">
+    <div class="container mx-auto text-center">
+      <p class="text-xl text-gray-700 mb-8">
+        Stay updated with live scores, the latest sports news, and shop for all your equipment needs!
+      </p>
+      <div class="flex justify-center gap-6 mb-12">
+        <a href="/sports" class="bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300">
+          Explore Sports
+        </a>
+        <a href="/equipment" class="bg-transparent bord-2 border-blue-600 text-blue-600 py-3 px-6 rounded-lg hover:bg-blue-600 hover:text-white transition duration-300">
+          Shop Equipment
+        </a>
+      </div>
+    </div>
+
+    <!-- Category Banner Section -->
+    <section class="bg-gray-50 py-16">
+      <div class="container mx-auto text-center mb-12">
+        <h2 class="text-3xl font-semibold text-blue-600">Sports Categories</h2>
+      </div>
+      <div class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-12 px-4">
+        <!-- Football Category Card with Image -->
+        <div class="bg-white shadow-lg p-6 rounded-xl hover:scale-105 translate-all">
+          <img src="https://i.pinimg.com/736x/8a/9e/58/8a9e582cd05ddc15bf151c4209f5b8b5.jpg" alt="Football" class="w-full h-48 object-cover rounded-t-xl mb-4">
+          <h3 class="text-2xl font-bold text-blue-600 mb-4">Football</h3>
+          <p class="text-gray-600">Latest matches, scores, and equipment for football enthusiasts.</p>
+        </div>
+        <!-- Cricket Category Card with Image -->
+        <div class="bg-white shadow-lg p-6 rounded-xl hover:scale-105 translate-all">
+          <img src="https://i.pinimg.com/736x/5b/9a/0d/5b9a0d12e0ba996da5a5749750f071ec.jpg" alt="Cricket" class="w-full h-48 object-cover rounded-t-xl mb-4">
+          <h3 class="text-2xl font-bold text-blue-600 mb-4">Cricket</h3>
+          <p class="text-gray-600">Find cricket news, live scores, and equipment for all levels.</p>
+        </div>
+        <!-- Basketball Category Card with Image -->
+        <div class="bg-white shadow-lg p-6 rounded-xl hover:scale-105 translate-all">
+          <img src="https://i.pinimg.com/736x/b3/c4/8b/b3c48bc751e920e46e2f3b14547a8579.jpg" alt="Basketball" class="w-full h-48 object-cover rounded-t-xl mb-4">
+          <h3 class="text-2xl font-bold text-blue-600 mb-4">Basketball</h3>
+          <p class="text-gray-600">Stay updated on live games and get the latest basketball gear.</p>
+        </div>
+        <!-- Tennis Category Card with Image -->
+        <div class="bg-white shadow-lg p-6 rounded-xl hover:scale-105 translate-all">
+          <img src="https://i.pinimg.com/736x/92/e6/ff/92e6ff4101fb80edc8cf44987d722b3a.jpg" alt="Tennis" class="w-full h-48 object-cover rounded-t-xl mb-4">
+          <h3 class="text-2xl font-bold text-blue-600 mb-4">Tennis</h3>
+          <p class="text-gray-600">Browse tennis articles, news, and shop for equipment.</p>
+        </div>
+        <!-- Rugby Category Card with Image -->
+        <div class="bg-white shadow-lg p-6 rounded-xl hover:scale-105 translate-all">
+          <img src="https://i.pinimg.com/736x/6f/2a/ce/6f2ace19c410654aff0a544b39f93095.jpg" alt="Rugby" class="w-full h-48 object-cover rounded-t-xl mb-4">
+          <h3 class="text-2xl font-bold text-blue-600 mb-4">Rugby</h3>
+          <p class="text-gray-600">Get the latest rugby scores, updates, and gear recommendations.</p>
+        </div>
+        <!-- Swimming Category Card with Image -->
+        <div class="bg-white shadow-lg p-6 rounded-xl hover:scale-105 translate-all">
+          <img src="https://i.pinimg.com/736x/5f/3c/36/5f3c36b8a54754ff1d068009068bb996.jpg" alt="Swimming" class="w-full h-48 object-cover rounded-t-xl mb-4">
+          <h3 class="text-2xl font-bold text-blue-600 mb-4">Swimming</h3>
+          <p class="text-gray-600">Keep track of swimming events and purchase your swimming gear.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Live Scores Banner with Image -->
+    <section class="bg-blue-600 text-white py-20">
+      <div class="container mx-auto text-center">
+        <h2 class="text-4xl font-extrabold mb-6">Live Sports Scores</h2>
+        <p class="text-xl mb-8">Get real-time live scores for your favorite sports. Never miss a game!</p>
+        <a href="/Categories" class="bg-white text-blue-600 py-3 px-6 rounded-lg hover:bg-gray-100 transition duration-300">
+          View Live Scores
+        </a>
+        <img src="https://i.pinimg.com/736x/43/7e/df/437edfe0aab564a7d612de8b65757d85.jpg" alt="Live Scores" class="mt-12 w-full h-72 object-cover rounded-xl">
+      </div>
+    </section>
+
+    <!-- Articles & News Banner with Image -->
+    <section class="py-20">
+      <div class="container mx-auto text-center">
+        <h2 class="text-4xl font-extrabold text-blue-600 mb-6">Latest Articles & News</h2>
+        <p class="text-xl text-gray-700 mb-8">Stay updated with the latest trends, articles, and news in the world of sports.</p>
+        <div class="flex justify-center gap-6 mb-12">
+          <a href="/articles" class="bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300">
+            Read Articles
+          </a>
+          <a href="/news" class="bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300">
+            Sports News
+          </a>
+        </div>
+        <img src="https://i.pinimg.com/736x/1d/9c/03/1d9c03b9d4c9223a28c6dfe5b1f3bc15.jpg" alt="Articles and News" class="w-full h-72 object-cover rounded-xl">
+      </div>
+    </section>
+    
+    
+
+    <!-- Trending Equipment Section -->
+    <section id="equipment" class="py-16 bg-blue-50">
+      <div class="container mx-auto text-center">
+        <h2 class="text-4xl font-semibold text-blue-600 mb-6">Trending Equipment</h2>
+        <p class="text-lg text-gray-600 mb-12">Shop the latest and trending sports equipment now.</p>
+        <div class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6">
+          <div class="bg-white shadow-lg rounded-lg p-6">
+            <img src="https://i.pinimg.com/736x/b4/60/30/b460309498d8bd99c443d629b1924335.jpg" alt="Football Gear" class="mx-auto mb-4">
+            <h3 class="text-xl font-bold text-blue-600">Football Gear</h3>
+            <p class="text-gray-600">High-quality football shoes, jerseys, and more.</p>
+          </div>
+          <div class="bg-white shadow-lg rounded-lg p-6">
+            <img src="https://i.pinimg.com/736x/2a/99/1a/2a991a8f1f2e99edcb6c25f5e38b62e9.jpg" alt="Cricket Kit" class="mx-auto mb-4">
+            <h3 class="text-xl font-bold text-blue-600">Cricket Kit</h3>
+            <p class="text-gray-600">Complete kits for beginners and pros alike.</p>
+          </div>
+          <div class="bg-white shadow-lg rounded-lg p-6">
+            <img src="https://i.pinimg.com/736x/e2/bf/1b/e2bf1b89419d6c4dcd26c3359c7609b4.jpg" alt="Tennis Gear" class="mx-auto mb-4">
+            <h3 class="text-xl font-bold text-blue-600">Tennis Gear</h3>
+            <p class="text-gray-600">Racquets, balls, and professional accessories.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-gray-50">
+      <div class="container mx-auto text-center">
+        <h2 class="text-4xl font-semibold text-blue-600 mb-6">What Our Users Say</h2>
+        <p class="text-lg text-gray-600 mb-12">Hear from our happy users about their experiences.</p>
+        <div class="grid md:grid-cols-3 sm:grid-cols-1 gap-8">
+          <div class="bg-white shadow-lg rounded-lg p-6">
+            <p class="text-gray-600 mb-4">"Amazing app! I love the live score updates and articles."</p>
+            <h4 class="text-blue-600 font-bold">- John D.</h4>
+          </div>
+          <div class="bg-white shadow-lg rounded-lg p-6">
+            <p class="text-gray-600 mb-4">"A fantastic platform for sports enthusiasts!"</p>
+            <h4 class="text-blue-600 font-bold">- Sarah K.</h4>
+          </div>
+          <div class="bg-white shadow-lg rounded-lg p-6">
+            <p class="text-gray-600 mb-4">"Great place to shop for sports gear."</p>
+            <h4 class="text-blue-600 font-bold">- Mike L.</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <section class="py-20 bg-blue-700 text-white text-center">
+      <div class="container mx-auto">
+        <h2 class="text-4xl font-extrabold mb-6">Ready to Dive into Sports?</h2>
+        <p class="text-lg mb-8">Join our community and enjoy the best sports experience ever!</p>
+        <a href="/signup" class="bg-white text-blue-700 py-3 px-8 rounded-lg hover:bg-gray-100 transition duration-300">
+          Sign Up Now
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="bg-blue-600igh text-white py-6">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2024 SportsApp. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

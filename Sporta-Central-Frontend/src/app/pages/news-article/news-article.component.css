@@ -1,0 +1,28 @@
+
+        :root {
+            --background: #0047AB;
+            --text-color: #333;
+            --header-color: #002D62;
+            --button-color: #002D62;
+            --dark-background: #121212;
+            --dark-text-color: #f0f0f0;
+        }
+        
+        
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: var(--background);
+            color: var(--text-color);
+            transition: var(--background) 0.3s, color 0.3s;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--header-color);
+            color: white;
+            padding: 10px 20px;
+        }
+        

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sports Categories</title>
+  <script src="https://cdn.jsdelivr.net/npm/tailwindcss@3.0.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 mt-6">
+
+  <header class="bg-blue-600 text-white py-4">
+    <div class="container mx-auto text-center">
+      <h1 class="text-3xl font-bold">Sports Categories</h1>
+      <p class="text-lg mt-2">Explore the best sports updates and live scores</p>
+    </div>
+  </header>
+
+  <div class="container mx-auto px-6 py-8">
+    <!-- Categories Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <!-- Category 1: Cricket -->
+      <div class="category-card bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-500 hover:scale-105" 
+           x-data="{ show: false }" x-on:mouseenter="show = true" x-on:mouseleave="show = false">
+        <img src="https://i.pinimg.com/736x/07/f3/de/07f3de81d5546be4b96378a5b8404307.jpg" alt="Cricket" class="w-full h-30 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold text-blue-600">Cricket</h3>
+          <p x-show="show" class="text-gray-600 mt-2">Live scores, news, and updates for Cricket.</p>
+          <a href="/category/cricket" class="text-blue-500 hover:text-blue-300 mt-2 inline-block">View Details</a>
+        </div>
+      </div>
+
+      <!-- Category 2: Basketball -->
+      <div class="category-card bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-500 hover:scale-105" 
+           x-data="{ show: false }" x-on:mouseenter="show = true" x-on:mouseleave="show = false">
+        <img src="https://i.pinimg.com/736x/f7/11/bb/f711bbe9c3f06a5c6dcaf9dc558d574b.jpg" alt="Basketball" class="w-full h-72 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold text-blue-600">Basketball</h3>
+          <p x-show="show" class="text-gray-600 mt-2">Latest updates on basketball scores and news.</p>
+          <a href="/category/basketball" class="text-blue-500 hover:text-blue-300 mt-2 inline-block">View Details</a>
+        </div>
+      </div>
+
+      <!-- Category 3: Football -->
+      <div class="category-card bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-500 hover:scale-105" 
+           x-data="{ show: false }" x-on:mouseenter="show = true" x-on:mouseleave="show = false">
+        <img src="https://i.pinimg.com/736x/80/06/2b/80062b7a57c76181dbd1322a437d030c.jpg" alt="Football" class="w-full h-72 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold text-blue-600">Football</h3>
+          <p x-show="show" class="text-gray-600 mt-2">Get all football match details, scores, and news.</p>
+          <a href="/category/football" class="text-blue-500 hover:text-blue-300 mt-2 inline-block">View Details</a>
+        </div>
+      </div>
+
+      <!-- Category 4: Tennis -->
+      <div class="category-card bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-500 hover:scale-105" 
+           x-data="{ show: false }" x-on:mouseenter="show = true" x-on:mouseleave="show = false">
+        <img src="https://i.pinimg.com/736x/92/54/e4/9254e439da3fc505ed652e07e583aa80.jpg" alt="Tennis" class="w-full h-72 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold text-blue-600">Tennis</h3>
+          <p x-show="show" class="text-gray-600 mt-2">Tennis live scores and news from major tournaments.</p>
+          <a href="/category/tennis" class="text-blue-500 hover:text-blue-300 mt-2 inline-block">View Details</a>
+        </div>
+      </div>
+
+      <!-- Category 5: Hockey -->
+      <div class="category-card bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-500 hover:scale-105" 
+           x-data="{ show: false }" x-on:mouseenter="show = true" x-on:mouseleave="show = false">
+        <img src="https://i.pinimg.com/736x/2f/77/3f/2f773f62d5b9c98b067a3dabd1d0fd19.jpg" alt="Hockey" class="w-full h-72 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold text-blue-600">Hockey</h3>
+          <p x-show="show" class="text-gray-600 mt-2">Catch up on the latest hockey match updates.</p>
+          <a href="/category/hockey" class="text-blue-500 hover:text-blue-300 mt-2 inline-block">View Details</a>
+        </div>
+      </div>
+
+      <!-- Category 6: Baseball -->
+      <div class="category-card bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-500 hover:scale-105" 
+           x-data="{ show: false }" x-on:mouseenter="show = true" x-on:mouseleave="show = false">
+        <img src="https://i.pinimg.com/736x/82/ae/6d/82ae6d1c305822e7f37499661dc42f22.jpg" alt="Baseball" class="w-full h-72 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold text-blue-600">Baseball</h3>
+          <p x-show="show" class="text-gray-600 mt-2">Stay updated with the latest baseball scores and news.</p>
+          <a href="/category/baseball" class="text-blue-500 hover:text-blue-300 mt-2 inline-block">View Details</a>
+        </div>
+      </div>
+
+      <!-- Category 7: Rugby -->
+      <div class="category-card bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-500 hover:scale-105" 
+           x-data="{ show: false }" x-on:mouseenter="show = true" x-on:mouseleave="show = false">
+        <img src="https://i.pinimg.com/736x/be/13/63/be13632792dd69132b18e5f107167274.jpg" alt="Rugby" class="w-full h-72 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold text-blue-600">Rugby</h3>
+          <p x-show="show" class="text-gray-600 mt-2">Latest updates and live scores for Rugby fans.</p>
+          <a href="/category/rugby" class="text-blue-500 hover:text-blue-300 mt-2 inline-block">View Details</a>
+        </div>
+      </div>
+
+      <!-- Category 8: Golf -->
+      <div class="category-card bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-500 hover:scale-105" 
+           x-data="{ show: false }" x-on:mouseenter="show = true" x-on:mouseleave="show = false">
+        <img src="https://i.pinimg.com/736x/c3/f1/16/c3f116305a4261a7d1ca4fd875c57810.jpg" alt="Golf" class="w-full h-72 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold text-blue-600">Golf</h3>
+          <p x-show="show" class="text-gray-600 mt-2">Golf news, scores, and tournament updates.</p>
+          <a href="/category/golf" class="text-blue-500 hover:text-blue-300 mt-2 inline-block">View Details</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- "See More" Button -->
+    <div class="text-center mt-8">
+      <a href="/more-categories" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition">See More Categories</a>
+    </div>
+  </div>
+
+  <footer class="bg-blue-600 text-white py-4">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2024 SportsApp - All Rights Reserved</p>
+    </div>
+  </footer>
+
+</body>
+</html>

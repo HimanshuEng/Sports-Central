@@ -1,0 +1,151 @@
+<header class="bg-blue-600 text-white shadow-lg">
+    <div class="container mx-auto flex items-center justify-between px-6 py-4">
+      <!-- Logo -->
+      <div class="text-2xl font-bold">
+       <a [routerLink]="'/home'" class="hover:text-blue-300 transition">
+
+         <!-- <img src="/navbar.png" alt="Sports Central Logo" class="w-40 h-20 object-contain" /> -->
+      Sports Central </a>
+      </div>
+  
+      <!-- Navigation Menu -->
+      <nav class="hidden md:flex space-x-6">
+        <a [routerLink]="'/home'"  class="hover:text-blue-300 transition">Home</a>
+        <a [routerLink]="'/Categories'"    class="hover:text-blue-300 transition">Categories</a>
+        <div class="relative group">
+          <a [routerLink]="'/live'" href="#" class="hover:text-blue-300 transition inline-flex items-center">
+            Cricket
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </a>
+          <!-- Dropdown Menu -->
+          <div class="absolute hidden group-hover:block bg-blue-700 text-white shadow-md rounded-md mt-2 w-48">
+            <ul>
+              <li>
+                <a [routerLink]="'/history'"  class="flex items-center px-4 py-2 hover:bg-blue-500 transition">
+                  <img src="" alt="Cricket" class="w-5 h-5 mr-2" />
+                  All Matches
+                </a>
+              </li>
+              <li>
+                <a [routerLink]="'/point-table'" class="flex items-center px-4 py-2 hover:bg-blue-500 transition">
+                  <img src="basketball-icon.png" alt="Basketball" class="w-5 h-5 mr-2" />
+                 Point Table
+                </a>
+              </li>
+              <li>
+                <a href="/hockey" class="flex items-center px-4 py-2 hover:bg-blue-500 transition">
+                  <img src="hockey-icon.png" alt="Hockey" class="w-5 h-5 mr-2" />
+                  Hockey
+                </a>
+              </li>
+              <li>
+                <a [routerLink]="'/football'"  class="flex items-center px-4 py-2 hover:bg-blue-500 transition">
+                  <img src="football-icon.png" alt="Football" class="w-5 h-5 mr-2" />
+                  Football
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <a href="/newsarticles" class="hover:text-blue-300 transition">Articles & News</a>
+        <a href="/shop" class="hover:text-blue-300 transition">Shop</a>
+        <!-- <a href="/contact" class="hover:text-blue-300 transition">Contact</a> -->
+      </nav>
+  
+      <!-- Right Section -->
+      <div class="flex items-center space-x-4">
+        <!-- Search Bar -->
+        <div class="relative hidden md:block">
+          <input
+            type="text"
+            placeholder="Search..."
+            class="bg-blue-500 text-white placeholder-blue-200 rounded-full pl-4 pr-10 py-1.5 focus:outline-none"
+          />
+          <button class="absolute right-2 top-1.5">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35m0 0a7 7 0 111.58-1.58M16.65 16.65l-4.35-4.35" />
+            </svg>
+          </button>
+        </div>
+  
+        <!-- Login Button -->
+        <a href="/login" class="hidden md:block bg-white text-blue-600 px-4 py-1 rounded-full hover:bg-blue-700 hover:text-white transition">
+          Login
+        </a>
+  
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="block md:hidden focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-blue-700 text-white px-6 py-4">
+      <a href="/home" class="block py-2 hover:text-blue-300 transition">Home</a>
+      <a [routerLink]="'/Categories'" href="/categories" class="block py-2 hover:text-blue-300 transition">Categories</a>
+      <div class="relative">
+        <button id="dropdown-btn" class="block py-2 w-full text-left hover:text-blue-300 transition">
+          Live Scores
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <!-- Dropdown Menu -->
+        <div id="dropdown-menu" class="hidden mt-2 bg-blue-700 text-white shadow-md rounded-md">
+          <ul>
+            <li>
+              <a href="/cricket" class="block px-4 py-2 hover:bg-blue-500 transition">Cricket</a>
+            </li>
+            <li>
+              <a href="/basketball" class="block px-4 py-2 hover:bg-blue-500 transition">Basketball</a>
+            </li>
+            <li>
+              <a href="/hockey" class="block px-4 py-2 hover:bg-blue-500 transition">Hockey</a>
+            </li>
+            <li>
+              <a href="/football" class="block px-4 py-2 hover:bg-blue-500 transition">Football</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <a href="/news-article'" class="block py-2 hover:text-blue-300 transition">Articles & News</a>
+      <a href="/shop" class="block py-2 hover:text-blue-300 transition">Shop</a>
+      <a href="/contact" class="block py-2 hover:text-blue-300 transition">Contact</a>
+      <a href="/login" class="block mt-4 bg-white text-blue-600 px-4 py-2 rounded-full hover:bg-blue-700 hover:text-white transition">Login</a>
+    </div>
+  </header>
+  <div class="container mx-auto px-16">
+
+
+    <router-outlet></router-outlet>
+    </div>
+    
+  <script>
+    // JavaScript for toggling the mobile menu
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  
+  
+
+    const dropdownBtn = document.querySelector('.relative');
+const dropdownMenu = document.getElementById('dropdown-menu');
+
+// Show dropdown when mouse enters the "Cricket" link or the dropdown itself
+dropdownBtn.addEventListener('mouseenter', () => {
+  dropdownMenu.classList.remove('hidden');
+});
+
+// Hide dropdown when mouse leaves both "Cricket" link and dropdown
+dropdownBtn.addEventListener('mouseleave', () => {
+  dropdownMenu.classList.add('hidden');
+});
+  </script>
+  
