@@ -20,7 +20,7 @@
 ---
 
 ## 📂 Project Structure
-```plaintext
+
 Sports-Central/
 ├── backend/   → Spring Boot API (Business logic & Database)
 ├── frontend/  → Angular 17 UI (User Interface)
