@@ -42,7 +42,8 @@ Sports-Central
    spring.datasource.username=root
    spring.datasource.password=yourpassword
 3. Run the application using:
-    mvn spring-boot:run
+ mvn spring-boot:run
+
 --------------------------------------------------------------------------------------
 ## 📸 Screenshots
 
