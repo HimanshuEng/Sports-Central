@@ -1,6 +1,3 @@
-<p align="center">
-  <img src="docs/sports-central-logo.png" width="180" alt="Sports Central Logo"/>
-</p>
 
 <h1 align="center">🏅 Sports Central</h1>
 
@@ -57,7 +54,7 @@ Sports-Central
 
 ## 🧑‍💻 Author
 Himanshu Kashyap
-📍 Full Stack Java Developer
+📍 Full Stack Java Developer.
 🔗 GitHub  : https://github.com/HimanshuEng
 🔗 LinkedIn : https://www.linkedin.com/in/himanshu-kashyap-ba456828b/
 
