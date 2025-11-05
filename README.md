@@ -54,11 +54,13 @@ Sports-Central/
 
 --------------------------------------------------------------------------------------
 
-## 🧑‍💻 Author
-Himanshu Kashyap                                                                                                                                                                                                     
-📍 Full Stack Java Developer.
-🔗 GitHub  : https://github.com/HimanshuEng
-🔗 LinkedIn : https://www.linkedin.com/in/himanshu-kashyap-ba456828b/
+## Author
+<p align="center">
+  <b>Himanshu Kashyap</b> • 📍 Full Stack Java Developer • 
+  <a href="https://github.com/HimanshuEng">GitHub</a> • 
+  <a href="https://www.linkedin.com/in/himanshu-kashyap-ba456828b/">LinkedIn</a>
+</p>
+
 
 --------------------------------------------------------------------------------------
 ⭐ Support
