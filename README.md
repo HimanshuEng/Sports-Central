@@ -1,0 +1,73 @@
+<p align="center">
+  <img src="docs/sports-central-logo.png" width="180" alt="Sports Central Logo"/>
+</p>
+
+<h1 align="center">🏅 Sports Central</h1>
+
+<p align="center">
+  A full-stack sports web application offering live scores across multiple categories, an online store for sports equipment, and the latest sports news — powered by <b>Angular 17</b> and <b>Spring Boot</b>.
+</p>
+
+---
+
+## 🚀 Tech Stack
+
+| Layer | Technology |
+|--------|-------------|
+| Frontend | Angular 17, Tailwind CSS,Bootstrap |
+| Backend | Spring Boot |
+| Database | MySQL |
+| Build Tool | Maven |
+| Server | Tomcat (Embedded) |
+
+---
+
+## 📂 Project Structure
+Sports-Central/
+├── backend/ → Spring Boot API (Business logic & Database)
+├── frontend/ → Angular 17 UI (User Interface)
+├── docs/ →  screenshots, logo
+└── README.md
+
+
+--------------------------------------------------------------------------------------
+
+## ⚙️ How to Run the Project
+
+### 🖥 Backend (Spring Boot)
+1. Open the `backend/` folder in IntelliJ IDEA or VS Code.  
+2. Update your `application.properties` file with your MySQL configuration:
+   ```properties
+   spring.datasource.url=jdbc:mysql://localhost:3306/sportscentral
+   spring.datasource.username=root
+   spring.datasource.password=yourpassword
+3. Run the application using:
+    mvn spring-boot:run
+--------------------------------------------------------------------------------------
+## 📸 Screenshots
+
+
+
+
+
+
+--------------------------------------------------------------------------------------
+
+## 🧑‍💻 Author
+Himanshu Kashyap
+📍 Full Stack Java Developer
+🔗 GitHub  : https://github.com/HimanshuEng
+🔗 LinkedIn : https://www.linkedin.com/in/himanshu-kashyap-ba456828b/
+
+--------------------------------------------------------------------------------------
+⭐ Support
+
+If you like this project, please give it a ⭐ on GitHub — it helps others find it too!
+
+<p align="center">Built with ❤️ using Angular & Spring Boot</p>
+
+
+
+
+
+
