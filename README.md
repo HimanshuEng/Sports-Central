@@ -15,7 +15,7 @@
 | Layer | Technology |
 |--------|-------------|
 | Frontend | Angular 17, Tailwind CSS,Bootstrap |
-| Backend | Spring Boot |
+| Backend | Spring Boot,Spring Orm |
 | Database | MySQL |
 | Build Tool | Maven |
 | Server | Tomcat (Embedded) |
