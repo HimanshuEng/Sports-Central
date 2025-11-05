@@ -20,11 +20,13 @@
 ---
 
 ## 📂 Project Structure
-Sports-Central
-├── backend/ → Spring Boot API (Business logic & Database)
-├── frontend/ → Angular 17 UI (User Interface)
-├── docs/ →  screenshots, logo
-└── README.md
+```plaintext
+Sports-Central/
+├── backend/   → Spring Boot API (Business logic & Database)
+├── frontend/  → Angular 17 UI (User Interface)
+├── docs/      → Screenshots, logo
+└── README.md  → Project documentation
+
 
 
 --------------------------------------------------------------------------------------
